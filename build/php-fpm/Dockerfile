@@ -83,11 +83,11 @@ RUN pecl install xdebug && \
 ADD ./codeigniter.ini /usr/local/etc/php/conf.d
 ADD ./vh-codeigniter.pool.conf /usr/local/etc/php-fpm.d/
 
-RUN rm -r /var/lib/apt/lists/*
+#RUN rm -r /var/lib/apt/lists/*
 
 RUN usermod -u 1000 www-data
 
-WORKDIR /var/www/laravel
+WORKDIR /var/www/codeigniter
 
 CMD ["php-fpm"]
 
