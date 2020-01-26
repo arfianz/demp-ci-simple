@@ -54,7 +54,7 @@ services:
 #      MYSQL_ROOT_PASSWORD: root
 
   mariadb:
-    build: .build/mariadb
+    build: ./build/mariadb
     container_name: mariadb
     volumes_from:
       - data
@@ -75,7 +75,7 @@ services:
       - "6378:6379"
 
   workspace:
-    build: ./workspace
+    build: ./build/workspace
     container_name: workspace
     volumes_from:
       - application
