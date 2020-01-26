@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y \
   curl \
   mysql-client \
   postgresql-client \
-  libpng12-dev \
+  libpng-dev \
   libfreetype6-dev \
   libssl-dev \
   libmcrypt-dev \
