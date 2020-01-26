@@ -15,7 +15,7 @@ services:
       - mariadb
 
   application:
-    build: ./application
+    build: ./build/application
     container_name: application
     volumes:
       - ./webroot:/var/www/codeigniter
