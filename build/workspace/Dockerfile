@@ -66,8 +66,8 @@ RUN curl -s http://getcomposer.org/installer | php \
 RUN echo "alias phpunit='php -dzend_extension=xdebug.so /var/www/codeigniter/vendor/bin/phpunit'" >> ~/.bashrc
 
 # Install mongodb extension
-RUN pecl install mongodb
-RUN echo "extension=mongodb.so" >> /etc/php/7.0/cli/php.ini
+#RUN pecl install mongodb
+#RUN echo "extension=mongodb.so" >> /etc/php/7.0/cli/php.ini
 
 ENV NVM_DIR=/root/.nvm
 
