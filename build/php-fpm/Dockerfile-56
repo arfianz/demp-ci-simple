@@ -2,8 +2,8 @@ FROM php:5.6-fpm
 
 MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 
-ADD ../../config/codeigniter.ini /usr/local/etc/php/conf.d
-ADD ../../config/vh-codeigniter.pool.conf /usr/local/etc/php-fpm.d/
+ADD ./codeigniter.ini /usr/local/etc/php/conf.d
+ADD ./config/vh-codeigniter.pool.conf /usr/local/etc/php-fpm.d/
 
 RUN apt-get update && apt-get install -y \
   libpq-dev \
