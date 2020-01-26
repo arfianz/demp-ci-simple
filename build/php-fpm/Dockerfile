@@ -1,4 +1,4 @@
-FROM php:7.0-fpm
+FROM php:7.2-fpm
 
 MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 
@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
   libmemcached-dev \
   curl \
   mysql-client \
-  postgresql-client \
+#  postgresql-client \
+#  libpng12-dev \
   libpng-dev \
   libfreetype6-dev \
   libssl-dev \
@@ -19,7 +20,7 @@ RUN apt-get update && apt-get install -y \
   rm -r /var/lib/apt/lists/*
 
 # Install mongodb driver
-RUN pecl install mongodb
+# RUN pecl install mongodb
 
 # configure gd library
 RUN docker-php-ext-configure gd \
@@ -29,7 +30,7 @@ RUN docker-php-ext-configure gd \
 # Install extensions using the helper script provided by the base image
 RUN docker-php-ext-install \
   pdo_mysql \
-  pdo_pgsql \
+#  pdo_pgsql \
   mysqli \
   gd \
   mcrypt

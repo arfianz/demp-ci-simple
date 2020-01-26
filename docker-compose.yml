@@ -5,7 +5,7 @@ services:
   php-fpm:
     build:
       context: ./build/php-fpm
-      dockerfile: Dockerfile-70
+#      dockerfile: Dockerfile-70
     container_name: php-fpm
     volumes_from:
       - application
